@@ -1,0 +1,91 @@
+/**
+ * KodNest Premium Build System — Base
+ * Clean reset, typography, no decorative noise.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--kn-background);
+  color: var(--kn-text);
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body-size);
+  line-height: var(--kn-line-height-body);
+  min-height: 100vh;
+}
+
+/* Headings — serif, confident, generous spacing */
+.kn-heading-1,
+.kn-heading-2,
+.kn-heading-3 {
+  font-family: var(--kn-font-serif);
+  font-weight: 600;
+  line-height: var(--kn-line-height-tight);
+  letter-spacing: var(--kn-letter-spacing-heading);
+  margin: 0 0 var(--kn-space-2) 0;
+  color: var(--kn-text);
+}
+
+.kn-heading-1 {
+  font-size: var(--kn-heading-size-1);
+  margin-bottom: var(--kn-space-2);
+}
+
+.kn-heading-2 {
+  font-size: var(--kn-heading-size-2);
+}
+
+.kn-heading-3 {
+  font-size: var(--kn-heading-size-3);
+}
+
+/* Body text — max width for readability */
+.kn-body,
+.kn-body-lg {
+  max-width: var(--kn-text-max-width);
+  margin: 0 0 var(--kn-space-2) 0;
+}
+
+.kn-body {
+  font-size: var(--kn-body-size);
+  line-height: var(--kn-line-height-body);
+}
+
+.kn-body-lg {
+  font-size: var(--kn-body-size-lg);
+  line-height: var(--kn-line-height-loose);
+}
+
+.kn-subtext {
+  font-size: var(--kn-body-size);
+  color: var(--kn-text-muted);
+  max-width: var(--kn-text-max-width);
+  margin: 0 0 var(--kn-space-3) 0;
+}
+
+/* Links */
+a {
+  color: var(--kn-accent);
+  text-decoration: none;
+  transition: color var(--kn-transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--kn-accent);
+  outline-offset: 2px;
+}

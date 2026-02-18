@@ -1,0 +1,60 @@
+/**
+ * KodNest Premium Build System — Design Tokens
+ * Calm, Intentional, Coherent, Confident.
+ * Maximum 4 colors. No gradients, no glassmorphism, no neon.
+ */
+
+:root {
+  /* ─── Color (4 colors only) ─── */
+  --kn-background: #F7F6F3;
+  --kn-text: #111111;
+  --kn-accent: #8B0000;
+  --kn-muted: #5C6B5A; /* semantic: success, warning, status */
+
+  /* Semantic aliases (derived; no extra colors) */
+  --kn-text-muted: #444444;
+  --kn-border: #DDDBD6;
+  --kn-border-focus: var(--kn-accent);
+  --kn-on-accent: #FFFFFF; /* contrast on accent only */
+
+  /* ─── Typography ─── */
+  --kn-font-serif: "Georgia", "Times New Roman", serif;
+  --kn-font-sans: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --kn-heading-size-1: 2.25rem;   /* 36px — large serif headline */
+  --kn-heading-size-2: 1.5rem;    /* 24px */
+  --kn-heading-size-3: 1.25rem;   /* 20px */
+  --kn-body-size: 1rem;           /* 16px */
+  --kn-body-size-lg: 1.125rem;    /* 18px */
+  --kn-line-height-tight: 1.35;
+  --kn-line-height-body: 1.65;
+  --kn-line-height-loose: 1.8;
+  --kn-text-max-width: 720px;
+
+  --kn-letter-spacing-heading: 0.02em;
+
+  /* ─── Spacing scale (only these values) ─── */
+  --kn-space-1: 8px;
+  --kn-space-2: 16px;
+  --kn-space-3: 24px;
+  --kn-space-4: 40px;
+  --kn-space-5: 64px;
+
+  /* ─── Layout ─── */
+  --kn-workspace-ratio: 70%;
+  --kn-panel-ratio: 30%;
+  --kn-topbar-height: 64px;
+  --kn-footer-height: 64px;
+
+  /* ─── Components ─── */
+  --kn-radius: 4px;
+  --kn-input-border: 1px solid var(--kn-border);
+  --kn-input-border-focus: 1px solid var(--kn-border-focus);
+  --kn-card-border: 1px solid var(--kn-border);
+  --kn-shadow-none: none;
+
+  /* ─── Interaction ─── */
+  --kn-transition-duration: 180ms;
+  --kn-transition-ease: ease-in-out;
+  --kn-transition: var(--kn-transition-duration) var(--kn-transition-ease);
+}

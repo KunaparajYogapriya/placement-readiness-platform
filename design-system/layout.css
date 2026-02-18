@@ -1,0 +1,113 @@
+/**
+ * KodNest Premium Build System — Global Layout
+ * [Top Bar] → [Context Header] → [Workspace + Panel] → [Proof Footer]
+ */
+
+/* ─── App shell ─── */
+.kn-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─── Top Bar ─── */
+.kn-topbar {
+  height: var(--kn-topbar-height);
+  padding: 0 var(--kn-space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--kn-input-border);
+  background: var(--kn-background);
+  flex-shrink: 0;
+}
+
+.kn-topbar__project {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body-size);
+  font-weight: 500;
+  color: var(--kn-text);
+}
+
+.kn-topbar__progress {
+  font-size: var(--kn-body-size);
+  color: var(--kn-text-muted);
+}
+
+.kn-topbar__status {
+  /* Badge lives here; see components */
+}
+
+/* ─── Context Header ─── */
+.kn-context-header {
+  padding: var(--kn-space-4) var(--kn-space-3) var(--kn-space-3);
+  border-bottom: var(--kn-input-border);
+  background: var(--kn-background);
+}
+
+.kn-context-header .kn-heading-1 {
+  margin-bottom: var(--kn-space-1);
+}
+
+.kn-context-header .kn-subtext {
+  margin-bottom: 0;
+}
+
+/* ─── Main content: Workspace + Panel ─── */
+.kn-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.kn-workspace {
+  width: var(--kn-workspace-ratio);
+  padding: var(--kn-space-3);
+  overflow: auto;
+  border-right: var(--kn-input-border);
+}
+
+.kn-panel {
+  width: var(--kn-panel-ratio);
+  padding: var(--kn-space-3);
+  overflow: auto;
+  background: var(--kn-background);
+}
+
+/* Text blocks in workspace/panel must not exceed reading width */
+.kn-workspace p,
+.kn-panel p {
+  max-width: var(--kn-text-max-width);
+}
+
+/* ─── Proof Footer (persistent) ─── */
+.kn-proof-footer {
+  height: var(--kn-footer-height);
+  padding: 0 var(--kn-space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-4);
+  border-top: var(--kn-input-border);
+  background: var(--kn-background);
+  flex-shrink: 0;
+}
+
+.kn-proof-footer__item {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-1);
+  font-size: var(--kn-body-size);
+  color: var(--kn-text);
+}
+
+.kn-proof-footer__item input[type="checkbox"] {
+  width: var(--kn-space-2);
+  height: var(--kn-space-2);
+  accent-color: var(--kn-accent);
+  cursor: pointer;
+}
+
+.kn-proof-footer__item input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--kn-accent);
+  outline-offset: 2px;
+}
